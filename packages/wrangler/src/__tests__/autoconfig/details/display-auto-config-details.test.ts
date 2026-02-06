@@ -22,6 +22,7 @@ describe("autoconfig details - displayAutoConfigDetails()", () => {
 			projectPath: process.cwd(),
 			workerName: "my-project",
 			framework: new Static({ id: "static", name: "Static" }),
+			outputDir: "./public",
 		});
 		expect(std.out).toMatchInlineSnapshot(
 			`
@@ -29,6 +30,7 @@ describe("autoconfig details - displayAutoConfigDetails()", () => {
 			Detected Project Settings:
 			 - Worker Name: my-project
 			 - Framework: Static
+			 - Output Directory: ./public
 			"
 		`
 		);

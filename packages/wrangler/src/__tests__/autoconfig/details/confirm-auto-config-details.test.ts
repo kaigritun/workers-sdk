@@ -31,6 +31,7 @@ describe("autoconfig details - confirmAutoConfigDetails()", () => {
 				projectPath: "<PROJECT_PATH>",
 				configured: false,
 				framework: new Static({ id: "static", name: "Static" }),
+				outputDir: "./public",
 			});
 
 			expect(updatedAutoConfigDetails).toMatchInlineSnapshot(`
@@ -43,6 +44,7 @@ describe("autoconfig details - confirmAutoConfigDetails()", () => {
 				    "id": "static",
 				    "name": "Static",
 				  },
+				  "outputDir": "./public",
 				  "projectPath": "<PROJECT_PATH>",
 				  "workerName": "worker-name",
 				}
@@ -160,6 +162,7 @@ describe("autoconfig details - confirmAutoConfigDetails()", () => {
 				projectPath: "<PROJECT_PATH>",
 				configured: false,
 				framework: new Static({ id: "static", name: "Static" }),
+				outputDir: "./public",
 			});
 
 			expect(updatedAutoConfigDetails).toMatchInlineSnapshot(`
@@ -172,6 +175,7 @@ describe("autoconfig details - confirmAutoConfigDetails()", () => {
 				    "id": "static",
 				    "name": "Static",
 				  },
+				  "outputDir": "./public",
 				  "projectPath": "<PROJECT_PATH>",
 				  "workerName": "worker-name",
 				}

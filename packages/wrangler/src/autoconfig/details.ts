@@ -163,6 +163,17 @@ export async function getDetailsForAutoConfig({
 		logger.debug("No package.json found when running autoconfig");
 	}
 
+	const outputDir =
+		detectedFramework?.dist ?? (await findAssetsDir(projectPath));
+
+	if (!outputDir) {
+		throw new FatalError(
+			framework.id === "static"
+				? "Could not detect a directory containing the static (html, css and js) files for the project"
+				: "Failed to detect an output directory for the project"
+		);
+	}
+
 	return {
 		projectPath: projectPath,
 		configured: framework.isConfigured(projectPath) ?? false,
@@ -173,7 +184,7 @@ export async function getDetailsForAutoConfig({
 					buildCommand: await getProjectBuildCommand(detectedFramework),
 				}
 			: {}),
-		outputDir: detectedFramework?.dist ?? (await findAssetsDir(projectPath)),
+		outputDir,
 		workerName: getWorkerName(packageJson?.name, projectPath),
 	};
 }
