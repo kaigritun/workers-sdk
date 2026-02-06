@@ -1,5 +1,25 @@
 # miniflare
 
+## 4.20260206.0
+
+### Minor Changes
+
+- [#12391](https://github.com/cloudflare/workers-sdk/pull/12391) [`ce9dc01`](https://github.com/cloudflare/workers-sdk/commit/ce9dc01a4696e28bd9f3a900dd2f5a7783252906) Thanks [@emily-shen](https://github.com/emily-shen)! - Serve the local explorer UI from Miniflare
+
+  This bundles the local explorer UI into Miniflare, and if enabled, Miniflare serves the UI at `/cdn-cgi/explorer`.
+
+  This is an experimental, WIP feature.
+
+### Patch Changes
+
+- [#12440](https://github.com/cloudflare/workers-sdk/pull/12440) [`555b32a`](https://github.com/cloudflare/workers-sdk/commit/555b32a1ea90554699af0a233eb04bb5d9b56697) Thanks [@dependabot](https://github.com/apps/dependabot)! - Update dependencies of "miniflare", "wrangler"
+
+  The following dependency versions have been updated:
+
+  | Dependency | From         | To           |
+  | ---------- | ------------ | ------------ |
+  | workerd    | 1.20260205.0 | 1.20260206.0 |
+
 ## 4.20260205.0
 
 ### Minor Changes
